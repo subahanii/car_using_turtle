@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static '/style.css'  %}">
+</head>
+<body>
+<form mathod="POST" action="/emp">
+    {% csrf_token %}
+    <br>
+    <h3>Enter Detail</h3><br>
+    <p> EmployeeId: </p>{{form.eid}}<br>
+
+    <p> EmployeeName: </p>{{form.ename}}<br>
+
+    <p> EmployeeEmail: </p>{{form.eemail}}<br>
+
+    <p> EmployeeContact: </p>{{form.econtact}}<br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
