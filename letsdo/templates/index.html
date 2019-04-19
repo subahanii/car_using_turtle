@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Index</title>
     {% load staticfiles %}
-    <link rel="stylesheet" href="{% static '/style.css'  %}">
+    <link rel="stylesheet" href="#">
 </head>
 <body>
-<form mathod="POST" action="/emp">
+<form mathod="GET" action="/emp">
     {% csrf_token %}
     <br>
     <h3>Enter Detail</h3><br>
@@ -15,10 +15,10 @@
 
     <p> EmployeeName: </p>{{form.ename}}<br>
 
-    <p> EmployeeEmail: </p>{{form.eemail}}<br>
+    <p> EmployeeEmail: </p>{{form.email}}<br>
 
     <p> EmployeeContact: </p>{{form.econtact}}<br>
-    <button type="submit">Submit</button>
+    <input type="submit">Submit</input>
 </form>
 </body>
 </html>

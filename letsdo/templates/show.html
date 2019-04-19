@@ -22,9 +22,12 @@
     <tr>
         <td>{{ employee.eid}}</td>
         <td>{{ employee.ename}}</td>
-        <td>{{ employee.eemail}}</td>
+        <td>{{ employee.email}}</td>
         <td>{{ employee.econtact}}</td>
-        <td>Delete,Update</td>
+        <td>
+            <a href="/Update/{{ employee.id }}" >Edit</a>
+            <a href="/delete/{{ employee.id}}">Delete</a>
+        </td>
     </tr>
     {% endfor %}
     </tbody>

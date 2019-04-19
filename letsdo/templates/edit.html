@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EditEmployee</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static '/style.css'  %}">
+</head>
+<body>
+<form mathod="POST" action="/update/{{employee.id}}">
+    {% csrf_token %}
+    <br>
+    <h3>Update Detail</h3><br>
+    <p> EmployeeId: </p><input type="text" name="eid" value="{{employee.eid}}"> <br>
+
+    <p> EmployeeName: </p><input type="text" name="eid" value="{{employee.ename}}"> <br>
+
+    <p> EmployeeEmail: </p><input type="text" name="eid" value="{{employee.email}}"> <br>
+
+    <p> EmployeeContact: </p><input type="text" name="eid" value="{{employee.econtact}}"> <br>
+    <button type="submit">Update</button>
+</form>
+</body>
+</html>
