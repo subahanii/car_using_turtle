@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="{% static '/style.css' %}">
 </head>
 <body>
-
+<p>User Name:{{uname}}</p>
+<br>
+<p><a href="/logout">Logout</a></p>
 <table>
     <tr>
         <th>Employee Id</th>
@@ -25,13 +27,16 @@
         <td>{{ employee.email}}</td>
         <td>{{ employee.econtact}}</td>
         <td>
-            <a href="/Update/{{ employee.id }}" >Edit</a>
+            <a href="/edit/{{ employee.id }}" >Edit</a>
             <a href="/delete/{{ employee.id}}">Delete</a>
         </td>
     </tr>
     {% endfor %}
     </tbody>
 </table>
-<a href="/emp" >Add New Record</a>
+<br>
+<br>
+<br>
+<a href="/" >Add New Record</a>
 </body>
 </html>

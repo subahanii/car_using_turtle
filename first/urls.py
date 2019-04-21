@@ -19,10 +19,15 @@ from letsdo import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('emp/',views.emp),
+    path('',views.index),
     path('show/', views.show),
+    path('register/register/<int:id>', views.register),
+    path('register/', views.register),
+    path('logout/', views.logout),
+    path('login/login/<int:id>', views.login),
+    path('login/', views.login),
     path('edit/<int:id>', views.edit),
     path('update/<int:id>', views.update),
-    path('delete/<int:id >', views.show),
+    path('delete/<int:id>', views.delete),
 
 ]

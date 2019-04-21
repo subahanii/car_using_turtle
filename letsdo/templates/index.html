@@ -7,18 +7,14 @@
     <link rel="stylesheet" href="#">
 </head>
 <body>
-<form mathod="GET" action="/emp">
-    {% csrf_token %}
-    <br>
-    <h3>Enter Detail</h3><br>
-    <p> EmployeeId: </p>{{form.eid}}<br>
+<br>
+<center>
+<a href="login" >Login</a>
+<a href="register" >Register</a><br>
 
-    <p> EmployeeName: </p>{{form.ename}}<br>
-
-    <p> EmployeeEmail: </p>{{form.email}}<br>
-
-    <p> EmployeeContact: </p>{{form.econtact}}<br>
-    <input type="submit">Submit</input>
-</form>
+<br>
+<h1>Welcome to home Page </h1>
+<h3>You can edit and delete of employee details after Loged in here!</h3>
+    </center>
 </body>
 </html>
